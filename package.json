@@ -1,0 +1,12 @@
+{
+  "name": "knowledgebase",
+  "private": true,
+  "type": "module",
+  "description": "Personal technical blog — static site, Markdown rendered in the browser. No dependencies.",
+  "scripts": {
+    "build": "node scripts/build-index.mjs",
+    "dev": "node scripts/build-index.mjs --drafts && python3 -m http.server 8000",
+    "new": "node scripts/new-post.mjs",
+    "test": "node --test scripts/test/"
+  }
+}

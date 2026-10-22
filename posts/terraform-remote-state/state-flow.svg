@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 220" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="13">
+  <rect width="640" height="220" fill="#ffffff"/>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#57606a"/>
+    </marker>
+  </defs>
+  <g fill="#f6f8fa" stroke="#57606a" stroke-width="1.5">
+    <rect x="24" y="30" width="150" height="48" rx="6"/>
+    <rect x="24" y="142" width="150" height="48" rx="6"/>
+    <rect x="390" y="56" width="226" height="108" rx="8"/>
+  </g>
+  <g fill="#1f2328">
+    <text x="99" y="59" text-anchor="middle">laptop: apply</text>
+    <text x="99" y="171" text-anchor="middle">CI: plan/apply</text>
+    <text x="503" y="82" text-anchor="middle" font-weight="700">s3://acme-terraform-state</text>
+    <text x="410" y="112">network/prod/terraform.tfstate</text>
+    <text x="410" y="136" fill="#9a6700">network/prod/….tflock</text>
+  </g>
+  <g stroke="#57606a" stroke-width="1.5" fill="none" marker-end="url(#arrow)">
+    <path d="M174 54 C 280 54, 300 100, 386 100"/>
+    <path d="M174 166 C 280 166, 300 128, 386 128"/>
+  </g>
+  <text x="250" y="44" fill="#1a7f37">acquire lock ✓</text>
+  <text x="250" y="196" fill="#cf222e">lock held → wait</text>
+</svg>
