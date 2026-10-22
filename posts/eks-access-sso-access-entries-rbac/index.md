@@ -33,6 +33,9 @@ and AssumeRole are covered in [AWS IAM basics](../aws-iam-basics-assumerole-pass
 
 ## The path of one kubectl call
 
+
+![SSO user to permission set to IAM role; EKS authenticates the role through an access entry, then authorizes through an access policy or RBAC](eks-sso-access.svg)
+
 1. The user signs in with SSO and gets credentials for
    `AWSReservedSSO_Read-Only-Access_<suffix>` in the cluster's account.
 2. `kubectl` runs `aws eks get-token`: a signed STS `GetCallerIdentity` request.

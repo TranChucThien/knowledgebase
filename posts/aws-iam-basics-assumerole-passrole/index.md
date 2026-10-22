@@ -144,6 +144,8 @@ The permissions policy says WHAT: any identity policy attached to the role
 
 ## 4. AssumeRole vs PassRole
 
+![AssumeRole: the engineer gets temporary credentials for role X from STS. PassRole: the engineer gives role Y to Lambda, and Lambda assumes it](assumerole-vs-passrole.svg)
+
 |  | sts:AssumeRole | iam:PassRole |
 | --- | --- | --- |
 | Meaning | I become the role and use its temporary credentials | I let a service use the role on my behalf |

@@ -29,11 +29,7 @@ resource alarms that can stop a whole cluster, and the Amazon MQ specifics.
 
 ## 1. The message path
 
-```txt
-Producer --publish + routing key--> Exchange --binding--> Queue A --deliver--> Consumer
-                                            \                  ^------- ack ------'
-                                             `-binding--> Queue B   (no consumer: grows)
-```
+![Producer publishes to an exchange, bindings copy each message to queue A (consumed and acked) and queue B (no consumer, grows forever)](message-path.svg)
 
 | Piece | What it is | Stores messages? |
 | --- | --- | --- |
@@ -80,15 +76,7 @@ metrics. The queue type is shown in the management console, column *Type*.
 
 ## 4. The two safety limits (resource alarms)
 
-```txt
-Messages pile up
-  └─ RAM used > memory high watermark?  or  disk free < disk free limit?
-       ├─ no  → normal
-       └─ yes → alarm on that node
-                 ├─ ALL publishing connections in the cluster are BLOCKED
-                 │    → every service that publishes stops
-                 └─ consume-only connections still work → can drain
-```
+![If RAM passes the watermark or free disk drops below the limit, one node alarms and every publisher in the cluster is blocked; consume-only connections can still drain](resource-alarms.svg)
 
 - **Memory high watermark**: the RabbitMQ default is 0.4 × RAM; above it,
   publishers are blocked until memory drops ([Memory alarms](https://www.rabbitmq.com/docs/memory)).

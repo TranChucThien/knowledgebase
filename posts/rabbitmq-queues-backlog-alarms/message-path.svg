@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 250" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="13">
+  <rect width="780" height="250" fill="#ffffff"/>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#57606a"/></marker><marker id="g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1a7f37"/></marker><marker id="r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#cf222e"/></marker><marker id="b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#0969da"/></marker><marker id="y" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#9a6700"/></marker></defs>
+  <rect x="20" y="70" width="130" height="56" rx="6" fill="#f6f8fa" stroke="#57606a" stroke-width="1.5"/>
+  <text x="85.0" y="93.7" fill="#1f2328" text-anchor="middle" font-size="12" font-weight="700">producer</text>
+  <text x="85.0" y="110.7" fill="#57606a" text-anchor="middle" font-size="12">publish + key</text>
+  <rect x="210" y="70" width="150" height="56" rx="6" fill="#ddf4ff" stroke="#57606a" stroke-width="1.5"/>
+  <text x="285.0" y="93.7" fill="#1f2328" text-anchor="middle" font-size="12" font-weight="700">exchange</text>
+  <text x="285.0" y="110.7" fill="#57606a" text-anchor="middle" font-size="12">routes only</text>
+  <rect x="440" y="30" width="140" height="56" rx="6" fill="#f6f8fa" stroke="#57606a" stroke-width="1.5"/>
+  <text x="510.0" y="53.7" fill="#1f2328" text-anchor="middle" font-size="12" font-weight="700">queue A</text>
+  <text x="510.0" y="70.7" fill="#57606a" text-anchor="middle" font-size="12">FIFO, stores</text>
+  <rect x="440" y="150" width="140" height="56" rx="6" fill="#ffebe9" stroke="#cf222e" stroke-width="1.5"/>
+  <text x="510.0" y="173.7" fill="#1f2328" text-anchor="middle" font-size="12" font-weight="700">queue B</text>
+  <text x="510.0" y="190.7" fill="#cf222e" text-anchor="middle" font-size="12">no consumer</text>
+  <rect x="640" y="30" width="120" height="56" rx="6" fill="#dafbe1" stroke="#57606a" stroke-width="1.5"/>
+  <text x="700.0" y="53.7" fill="#1f2328" text-anchor="middle" font-size="12" font-weight="700">consumer</text>
+  <text x="700.0" y="70.7" fill="#57606a" text-anchor="middle" font-size="12">processes</text>
+  <path d="M150 98 L208 98" fill="none" stroke="#57606a" stroke-width="1.5" marker-end="url(#a)"/>
+  <path d="M360 90 L438 60" fill="none" stroke="#57606a" stroke-width="1.5" marker-end="url(#a)"/>
+  <text x="392.0" y="62.0" fill="#57606a" text-anchor="middle" font-size="11">binding</text>
+  <path d="M360 108 L438 175" fill="none" stroke="#57606a" stroke-width="1.5" marker-end="url(#a)"/>
+  <text x="392.0" y="158.0" fill="#57606a" text-anchor="middle" font-size="11">binding</text>
+  <path d="M580 50 L638 50" fill="none" stroke="#57606a" stroke-width="1.5" marker-end="url(#a)"/>
+  <text x="609.0" y="42.0" fill="#57606a" text-anchor="middle" font-size="11">deliver</text>
+  <path d="M640 72 L582 72" fill="none" stroke="#1a7f37" stroke-width="1.5" marker-end="url(#g)"/>
+  <text x="611.0" y="88.0" fill="#1a7f37" text-anchor="middle" font-size="11">ack</text>
+  <text x="510.0" y="230.0" fill="#cf222e" text-anchor="middle" font-size="12">grows forever (no TTL / max-length)</text>
+</svg>

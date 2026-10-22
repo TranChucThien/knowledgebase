@@ -32,15 +32,9 @@ example everywhere: an app called `portal` on EKS, public name
 
 ## Overview
 
-```txt
-helm install
-  └─► Ingress (host, class, annotations)
-        ├─► AWS Load Balancer Controller ─► ALB
-        │      listener 443 + ACM cert, rule host-header → pod IPs
-        └─► external-dns ─► Route 53 alias A: portal.company.com → ALB
+The numbers match the steps in section 3.
 
-User ─► DNS lookup (Route 53) ─► HTTPS to the ALB ─► Host matches? ─► pods
-```
+![helm install creates the Ingress; the AWS Load Balancer Controller builds the ALB with the ACM cert, external-dns writes the Route 53 alias, and the ALB forwards matching hosts to the pods](ingress-flow.svg)
 
 ## 1. The pieces
 

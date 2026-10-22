@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 370" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="13">
+  <rect width="820" height="370" fill="#ffffff"/>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#57606a"/></marker><marker id="g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1a7f37"/></marker><marker id="r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#cf222e"/></marker><marker id="b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#0969da"/></marker><marker id="y" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#9a6700"/></marker></defs>
+  <rect x="20" y="20" width="150" height="56" rx="6" fill="#f6f8fa" stroke="#57606a" stroke-width="1.5"/>
+  <text x="95.0" y="43.7" fill="#1f2328" text-anchor="middle" font-size="12" font-weight="700">SSO user</text>
+  <text x="95.0" y="60.7" fill="#57606a" text-anchor="middle" font-size="12">signs in</text>
+  <rect x="220" y="20" width="180" height="56" rx="6" fill="#f6f8fa" stroke="#57606a" stroke-width="1.5"/>
+  <text x="310.0" y="43.7" fill="#1f2328" text-anchor="middle" font-size="12" font-weight="700">permission set</text>
+  <text x="310.0" y="60.7" fill="#57606a" text-anchor="middle" font-size="12">per user, per account</text>
+  <rect x="450" y="20" width="350" height="56" rx="6" fill="#ddf4ff" stroke="#57606a" stroke-width="1.5"/>
+  <text x="625.0" y="43.7" fill="#1f2328" text-anchor="middle" font-size="12" font-weight="700">IAM role AWSReservedSSO_&lt;set&gt;_…</text>
+  <text x="625.0" y="60.7" fill="#57606a" text-anchor="middle" font-size="12">the cluster only sees this role</text>
+  <path d="M170 48 L218 48" fill="none" stroke="#57606a" stroke-width="1.5" marker-end="url(#a)"/>
+  <path d="M400 48 L448 48" fill="none" stroke="#57606a" stroke-width="1.5" marker-end="url(#a)"/>
+  <rect x="20" y="106" width="790" height="256" rx="10" fill="none" stroke="#57606a" stroke-width="1.2" stroke-dasharray="6 4"/>
+  <text x="32.0" y="126.0" fill="#57606a" text-anchor="start" font-size="12" font-style="italic">EKS</text>
+  <path d="M625 76 L625 148" fill="none" stroke="#57606a" stroke-width="1.5" marker-end="url(#a)"/>
+  <text x="612.0" y="100.0" fill="#57606a" text-anchor="end" font-size="11">kubectl → aws eks get-token</text>
+  <rect x="440" y="150" width="360" height="66" rx="6" fill="#f6f8fa" stroke="#57606a" stroke-width="1.5"/>
+  <text x="620.0" y="170.2" fill="#1f2328" text-anchor="middle" font-size="12" font-weight="700">1. authentication</text>
+  <text x="620.0" y="187.2" fill="#57606a" text-anchor="middle" font-size="12">access entry (or aws-auth)</text>
+  <text x="620.0" y="204.2" fill="#57606a" text-anchor="middle" font-size="12">→ username + groups</text>
+  <rect x="40" y="156" width="300" height="54" rx="6" fill="#ffebe9" stroke="#cf222e" stroke-width="1.5"/>
+  <text x="190.0" y="178.7" fill="#cf222e" text-anchor="middle" font-size="12" font-weight="700">401 Unauthorized</text>
+  <text x="190.0" y="195.7" fill="#57606a" text-anchor="middle" font-size="12">role not mapped</text>
+  <path d="M438 183 L342 183" fill="none" stroke="#cf222e" stroke-width="1.5" marker-end="url(#r)"/>
+  <text x="390.0" y="176.0" fill="#cf222e" text-anchor="middle" font-size="11">not found</text>
+  <rect x="40" y="238" width="520" height="112" rx="10" fill="none" stroke="#57606a" stroke-width="1.2" stroke-dasharray="6 4"/>
+  <text x="52.0" y="258.0" fill="#57606a" text-anchor="start" font-size="12" font-style="italic">2. authorization: permissions add up</text>
+  <rect x="56" y="270" width="236" height="64" rx="6" fill="#ddf4ff" stroke="#57606a" stroke-width="1.5"/>
+  <text x="174.0" y="289.2" fill="#1f2328" text-anchor="middle" font-size="12" font-weight="700">Method 1</text>
+  <text x="174.0" y="306.2" fill="#57606a" text-anchor="middle" font-size="12">EKS access policy</text>
+  <text x="174.0" y="323.2" fill="#57606a" text-anchor="middle" font-size="12">on the entry</text>
+  <rect x="308" y="270" width="236" height="64" rx="6" fill="#f6f8fa" stroke="#57606a" stroke-width="1.5"/>
+  <text x="426.0" y="289.2" fill="#1f2328" text-anchor="middle" font-size="12" font-weight="700">Method 2</text>
+  <text x="426.0" y="306.2" fill="#57606a" text-anchor="middle" font-size="12">group → RBAC binding</text>
+  <text x="426.0" y="323.2" fill="#57606a" text-anchor="middle" font-size="12">→ ClusterRole</text>
+  <path d="M560 216 L470 236" fill="none" stroke="#57606a" stroke-width="1.5" marker-end="url(#a)"/>
+  <rect x="600" y="250" width="200" height="40" rx="6" fill="#dafbe1" stroke="#1a7f37" stroke-width="1.5"/>
+  <text x="700.0" y="274.2" fill="#1a7f37" text-anchor="middle" font-size="12" font-weight="700">allowed</text>
+  <rect x="600" y="304" width="200" height="40" rx="6" fill="#ffebe9" stroke="#cf222e" stroke-width="1.5"/>
+  <text x="700.0" y="328.2" fill="#cf222e" text-anchor="middle" font-size="12" font-weight="700">403 Forbidden</text>
+  <path d="M560 270 L598 270" fill="none" stroke="#1a7f37" stroke-width="1.5" marker-end="url(#g)"/>
+  <text x="680.0" y="242.0" fill="#1a7f37" text-anchor="middle" font-size="11">any allows</text>
+  <path d="M560 324 L598 324" fill="none" stroke="#cf222e" stroke-width="1.5" marker-end="url(#r)"/>
+</svg>

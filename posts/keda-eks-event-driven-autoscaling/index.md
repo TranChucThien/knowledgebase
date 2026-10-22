@@ -34,6 +34,10 @@ that reads an SQS queue `orders-q` in `ap-southeast-1`. Account numbers like
 
 ## Scaling lifecycle
 
+
+![keda-operator polls SQS with an IAM role, handles 0 to 1, and serves the metric that the HPA uses to scale the worker Deployment from 1 to N](keda-sqs-architecture.svg)
+
+
 Who changes `replicas`, over time:
 
 1. `worker` is idle at **0 replicas**. A producer sends 100 messages to `orders-q`.

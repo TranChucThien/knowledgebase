@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 320" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="13">
+  <rect width="820" height="320" fill="#ffffff"/>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#57606a"/></marker><marker id="g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1a7f37"/></marker><marker id="r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#cf222e"/></marker><marker id="b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#0969da"/></marker><marker id="y" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#9a6700"/></marker></defs>
+  <text x="20.0" y="28.0" fill="#1f2328" text-anchor="start" font-size="14" font-weight="700">sts:AssumeRole: I become the role</text>
+  <rect x="20" y="46" width="140" height="56" rx="6" fill="#f6f8fa" stroke="#57606a" stroke-width="1.5"/>
+  <text x="90.0" y="69.7" fill="#1f2328" text-anchor="middle" font-size="12" font-weight="700">engineer</text>
+  <text x="90.0" y="86.7" fill="#57606a" text-anchor="middle" font-size="12">or CI, app</text>
+  <rect x="250" y="46" width="130" height="56" rx="6" fill="#ddf4ff" stroke="#57606a" stroke-width="1.5"/>
+  <text x="315.0" y="78.5" fill="#1f2328" text-anchor="middle" font-size="13" font-weight="700">STS</text>
+  <rect x="470" y="46" width="150" height="56" rx="6" fill="#f6f8fa" stroke="#57606a" stroke-width="1.5"/>
+  <text x="545.0" y="69.7" fill="#1f2328" text-anchor="middle" font-size="12" font-weight="700">role X</text>
+  <text x="545.0" y="86.7" fill="#57606a" text-anchor="middle" font-size="12">trust: engineer</text>
+  <rect x="680" y="46" width="120" height="56" rx="6" fill="#dafbe1" stroke="#57606a" stroke-width="1.5"/>
+  <text x="740.0" y="69.7" fill="#1f2328" text-anchor="middle" font-size="12" font-weight="700">S3, EC2…</text>
+  <text x="740.0" y="86.7" fill="#57606a" text-anchor="middle" font-size="12">API calls</text>
+  <path d="M160 66 L248 66" fill="none" stroke="#57606a" stroke-width="1.5" marker-end="url(#a)"/>
+  <text x="204.0" y="60.0" fill="#57606a" text-anchor="middle" font-size="11">AssumeRole</text>
+  <path d="M380 66 L468 66" fill="none" stroke="#57606a" stroke-width="1.5" marker-end="url(#a)"/>
+  <text x="424.0" y="60.0" fill="#57606a" text-anchor="middle" font-size="11">check trust</text>
+  <path d="M248 92 L162 92" fill="none" stroke="#1a7f37" stroke-width="1.5" marker-end="url(#g)"/>
+  <text x="204.0" y="110.0" fill="#1a7f37" text-anchor="middle" font-size="11">temp creds</text>
+  <path d="M90 102 L90 140 L740 140" fill="none" stroke="#1a7f37" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <path d="M740 140 L740 104" fill="none" stroke="#1a7f37" stroke-width="1.5" marker-end="url(#g)"/>
+  <text x="420.0" y="156.0" fill="#1a7f37" text-anchor="middle" font-size="11">engineer calls APIs as role X</text>
+  <text x="20.0" y="196.0" fill="#1f2328" text-anchor="start" font-size="14" font-weight="700">iam:PassRole: I give a role to a service</text>
+  <rect x="20" y="214" width="140" height="70" rx="6" fill="#f6f8fa" stroke="#57606a" stroke-width="1.5"/>
+  <text x="90.0" y="236.2" fill="#1f2328" text-anchor="middle" font-size="12" font-weight="700">engineer</text>
+  <text x="90.0" y="253.2" fill="#57606a" text-anchor="middle" font-size="12">has iam:PassRole</text>
+  <text x="90.0" y="270.2" fill="#57606a" text-anchor="middle" font-size="12">on role Y</text>
+  <rect x="250" y="220" width="150" height="56" rx="6" fill="#ddf4ff" stroke="#57606a" stroke-width="1.5"/>
+  <text x="325.0" y="243.7" fill="#1f2328" text-anchor="middle" font-size="12" font-weight="700">Lambda</text>
+  <text x="325.0" y="260.7" fill="#57606a" text-anchor="middle" font-size="12">CreateFunction</text>
+  <rect x="470" y="220" width="150" height="56" rx="6" fill="#f6f8fa" stroke="#57606a" stroke-width="1.5"/>
+  <text x="545.0" y="243.7" fill="#1f2328" text-anchor="middle" font-size="12" font-weight="700">role Y</text>
+  <text x="545.0" y="260.7" fill="#57606a" text-anchor="middle" font-size="12">trust: lambda</text>
+  <rect x="680" y="220" width="120" height="56" rx="6" fill="#dafbe1" stroke="#57606a" stroke-width="1.5"/>
+  <text x="740.0" y="243.7" fill="#1f2328" text-anchor="middle" font-size="12" font-weight="700">S3, SQS…</text>
+  <text x="740.0" y="260.7" fill="#57606a" text-anchor="middle" font-size="12">as role Y</text>
+  <path d="M160 248 L248 248" fill="none" stroke="#57606a" stroke-width="1.5" marker-end="url(#a)"/>
+  <text x="204.0" y="240.0" fill="#57606a" text-anchor="middle" font-size="11">role = Y</text>
+  <path d="M400 248 L468 248" fill="none" stroke="#57606a" stroke-width="1.5" marker-end="url(#a)"/>
+  <text x="434.0" y="240.0" fill="#57606a" text-anchor="middle" font-size="11">assumes</text>
+  <path d="M620 248 L678 248" fill="none" stroke="#1a7f37" stroke-width="1.5" marker-end="url(#g)"/>
+  <text x="410.0" y="306.0" fill="#57606a" text-anchor="middle" font-size="11">no PassRole event in CloudTrail: look at CreateFunction</text>
+</svg>

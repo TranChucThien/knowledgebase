@@ -72,19 +72,7 @@ See [Email validation](https://docs.aws.amazon.com/acm/latest/userguide/email-va
 
 ## 3. Timeline of a renewal (198-day cert)
 
-```txt
-Day 0     cert issued
-Day 153   45 days left → ACM starts renewal
-            ├─ DNS (CNAME present, cert in use) → re-validated by ACM,
-            │                                     new cert on the same ARN, no outage
-            └─ Email → approval emails, link valid 72 h
-                 ├─ someone clicks → same as DNS
-                 └─ nobody clicks
-Day 168   30 days left → EventBridge "Approaching Expiration" (daily)
-                         + "Renewal Action Required"
-          reminders at 15, 3 and 1 days
-Day 198   EXPIRED → clients reject TLS
-```
+![Renewal timeline of a 198-day cert: DNS re-validates automatically at day 153, email waits for a click, EventBridge warns from day 168, the cert expires at day 198](renewal-timeline.svg)
 
 - ACM starts renewal **45 days** before expiry for 198-day certs (60 days for the
   old 395-day certs) ([What's New, 2026-02-18](https://aws.amazon.com/about-aws/whats-new/2026/02/aws-certificate-manager-updates-default)).

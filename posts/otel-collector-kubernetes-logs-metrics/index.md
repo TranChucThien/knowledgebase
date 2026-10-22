@@ -27,6 +27,9 @@ collector, and why a metric you expect sometimes never shows up.
 
 ## 1. Big picture: three collectors
 
+
+![Agents on every node send logs and metrics to the backend and traces to the gateway; the cluster collector watches the API server](three-collectors.svg)
+
 |  | Agent | Cluster collector | Gateway |
 | --- | --- | --- | --- |
 | Runs as | DaemonSet, one per node | Deployment, **one** per cluster | Deployment, several replicas (HPA) |
@@ -42,6 +45,9 @@ load ([k8s_cluster README](https://github.com/open-telemetry/opentelemetry-colle
 One collector pod is **one process** with five kinds of components. A component
 runs only if `service.pipelines` uses it, and processors run **in the listed
 order** ([Collector configuration](https://opentelemetry.io/docs/collector/configuration/)).
+
+
+![Inside one collector: receivers pull or receive data, processors run in order and can drop data, only exporters send it out](collector-pipeline.svg)
 
 | Component | Job | Examples |
 | --- | --- | --- |

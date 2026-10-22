@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 280" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="13">
+  <rect width="820" height="280" fill="#ffffff"/>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#57606a"/></marker><marker id="g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1a7f37"/></marker><marker id="r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#cf222e"/></marker><marker id="b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#0969da"/></marker><marker id="y" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#9a6700"/></marker></defs>
+  <path d="M40 130 L170 130" fill="none" stroke="#1f2328" stroke-width="2"/>
+  <path d="M190 130 L760 130" fill="none" stroke="#1f2328" stroke-width="2"/>
+  <path d="M166 140 L176 120" fill="none" stroke="#1f2328" stroke-width="1.5"/>
+  <path d="M184 140 L194 120" fill="none" stroke="#1f2328" stroke-width="1.5"/>
+  <path d="M40 122 L40 138" fill="none" stroke="#1f2328" stroke-width="2"/>
+  <text x="40.0" y="156.0" fill="#1f2328" text-anchor="middle" font-size="11">day 0</text>
+  <path d="M330 122 L330 138" fill="none" stroke="#1f2328" stroke-width="2"/>
+  <text x="330.0" y="156.0" fill="#1f2328" text-anchor="middle" font-size="11">day 153</text>
+  <path d="M470 122 L470 138" fill="none" stroke="#1f2328" stroke-width="2"/>
+  <text x="470.0" y="156.0" fill="#1f2328" text-anchor="middle" font-size="11">day 168</text>
+  <path d="M600 122 L600 138" fill="none" stroke="#1f2328" stroke-width="2"/>
+  <text x="600.0" y="156.0" fill="#1f2328" text-anchor="middle" font-size="11">day 183</text>
+  <path d="M760 122 L760 138" fill="none" stroke="#1f2328" stroke-width="2"/>
+  <text x="760.0" y="156.0" fill="#1f2328" text-anchor="middle" font-size="11">day 198</text>
+  <text x="44.0" y="112.0" fill="#57606a" text-anchor="start" font-size="12">cert issued</text>
+  <text x="322.0" y="112.0" fill="#1f2328" text-anchor="end" font-size="12">45 days left: renewal starts</text>
+  <rect x="250" y="14" width="300" height="62" rx="6" fill="#dafbe1" stroke="#1a7f37" stroke-width="1.5"/>
+  <text x="400.0" y="32.2" fill="#1a7f37" text-anchor="middle" font-size="12">DNS + CNAME + cert in use</text>
+  <text x="400.0" y="49.2" fill="#1f2328" text-anchor="middle" font-size="12">re-validated automatically</text>
+  <text x="400.0" y="66.2" fill="#1a7f37" text-anchor="middle" font-size="12">new cert, same ARN, no outage</text>
+  <path d="M330 122 L330 78" fill="none" stroke="#1a7f37" stroke-width="1.5" marker-end="url(#g)"/>
+  <rect x="150" y="192" width="250" height="70" rx="6" fill="#fff8c5" stroke="#9a6700" stroke-width="1.5"/>
+  <text x="275.0" y="214.2" fill="#9a6700" text-anchor="middle" font-size="12">Email</text>
+  <text x="275.0" y="231.2" fill="#1f2328" text-anchor="middle" font-size="12">approval emails, link 72 h</text>
+  <text x="275.0" y="248.2" fill="#9a6700" text-anchor="middle" font-size="12">waits for a human click</text>
+  <path d="M330 160 L330 190" fill="none" stroke="#9a6700" stroke-width="1.5" marker-end="url(#y)"/>
+  <rect x="420" y="192" width="230" height="70" rx="6" fill="#f6f8fa" stroke="#57606a" stroke-width="1.5"/>
+  <text x="535.0" y="214.2" fill="#1f2328" text-anchor="middle" font-size="12" font-weight="700">EventBridge</text>
+  <text x="535.0" y="231.2" fill="#57606a" text-anchor="middle" font-size="12">daily from 30 days left</text>
+  <text x="535.0" y="248.2" fill="#57606a" text-anchor="middle" font-size="12">retries at 15, 3, 1 days</text>
+  <path d="M470 160 L470 190" fill="none" stroke="#57606a" stroke-width="1.5" marker-end="url(#a)"/>
+  <rect x="670" y="192" width="136" height="70" rx="6" fill="#ffebe9" stroke="#cf222e" stroke-width="1.5"/>
+  <text x="738.0" y="214.2" fill="#cf222e" text-anchor="middle" font-size="12" font-weight="700">EXPIRED</text>
+  <text x="738.0" y="231.2" fill="#cf222e" text-anchor="middle" font-size="12">nobody clicked</text>
+  <text x="738.0" y="248.2" fill="#cf222e" text-anchor="middle" font-size="12">clients fail TLS</text>
+  <path d="M760 160 L760 190" fill="none" stroke="#cf222e" stroke-width="1.5" marker-end="url(#r)"/>
+  <text x="600.0" y="112.0" fill="#57606a" text-anchor="middle" font-size="11">15 days left</text>
+</svg>
